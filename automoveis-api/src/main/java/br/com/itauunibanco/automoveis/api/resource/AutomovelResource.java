@@ -1,12 +1,13 @@
 package br.com.itauunibanco.automoveis.api.resource;
 
-import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +16,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import br.com.itauunibanco.automoveis.api.event.LocationEvent;
 import br.com.itauunibanco.automoveis.api.model.Automovel;
 import br.com.itauunibanco.automoveis.api.repository.AutomovelRepository;
 
@@ -37,6 +38,9 @@ public class AutomovelResource {
 
     @Autowired
     private AutomovelRepository automovelRepository;
+    
+    @Autowired
+    private ApplicationEventPublisher publisher ;
     
     /**
      * Lista os automóveis disponível para compra.
@@ -60,10 +64,10 @@ public class AutomovelResource {
      */
 
     @PostMapping
-    public ResponseEntity<Automovel> cadastrar(@RequestBody @Valid Automovel automovel ) {
+    public ResponseEntity<Automovel> cadastrar(@RequestBody @Valid Automovel automovel, HttpServletResponse response ) {
 	Automovel novoAutomovel = automovelRepository.save(automovel);
-	URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{codigo}").buildAndExpand(novoAutomovel.getCodigo()).toUri();
-	return ResponseEntity.created(uri).body(novoAutomovel);
+	publisher.publishEvent( new LocationEvent(this, response , novoAutomovel.getCodigo(), "/{codigo}" ) );
+	return ResponseEntity.status(HttpStatus.CREATED).body(novoAutomovel);
     }
     
     /**
@@ -75,6 +79,6 @@ public class AutomovelResource {
     @GetMapping("/{codigo}")
     public ResponseEntity<Automovel> buscarPeloCodigo(@PathVariable Long codigo) {
 	Optional<Automovel> op = Optional.of(automovelRepository.getOne(codigo));
-	return op.isPresent() ? ResponseEntity.ok(op.get()) : ResponseEntity.status(HttpStatus.NOT_FOUND).body(op.get());
+	return op.isPresent() ? ResponseEntity.ok(op.get()) : ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 }
