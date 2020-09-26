@@ -12,10 +12,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 1.0 {@link AutomoveisApplication}
  * 
  */
-
+   
 @SpringBootApplication
 public class AutomoveisApplication {
 
+    
 	public static void main(String[] args) {
 		SpringApplication.run(AutomoveisApplication.class, args);
 	}
