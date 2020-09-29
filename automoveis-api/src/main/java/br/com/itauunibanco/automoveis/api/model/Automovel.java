@@ -9,12 +9,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PositiveOrZero;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -36,13 +39,13 @@ import lombok.Setter;
 
 @Entity 
 @Table(name = "tb_automovel")
-@AllArgsConstructor @Getter @Setter
+@Getter @Setter
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})	
 public class Automovel implements Serializable {
 
     
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
-    @Column(name = "codigo",length = 50, updatable = false)
+    @Column(name = "codigo",length = 20, updatable = false)
     @Id private Long codigo;
     
     @Column(name = "marca", length = 30 , nullable = false)
@@ -53,14 +56,23 @@ public class Automovel implements Serializable {
     @NotNull @Size(min = 2 ,  max = 30)
     private String modelo;
     
-    @Column(name = "valor", length = 100, nullable = false)
-    @NotNull 
+    @Column(name = "valor", length = 50, nullable = false)
+    @NotEmpty @PositiveOrZero
     private  Double valor;
     
-    @Column(name = "data_cadastro", length = 100 , updatable = false)
+    @Column(name = "data_cadastro", length = 15 , updatable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Calendar dataCadastro;
-    
-    public Automovel() {}
 
+    public Automovel(Long codigo,  String marca,String modelo,  Double valor, Calendar dataCadastro) {
+	this.codigo = codigo;
+	this.marca = marca;
+	this.modelo = modelo;
+	this.valor = valor;
+	this.dataCadastro = dataCadastro;
+    }
+    
+    public Automovel() {
+    }
     
 }
