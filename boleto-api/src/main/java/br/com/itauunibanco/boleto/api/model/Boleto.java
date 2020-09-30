@@ -45,12 +45,10 @@ public class Boleto {
     @Column(name = "codigo",length = 20, updatable = false)
     @Id private Long codigo;
     
-    @JsonIgnoreProperties
     @Column(name = "marca", length = 30 , nullable = false)
     @NotNull @Size(min = 2 ,  max = 30)
     private String marca;
     
-    @JsonIgnoreProperties
     @Column(name = "modelo", length = 30, nullable = false )
     @NotNull @Size(min = 2 ,  max = 30)
     private String modelo;

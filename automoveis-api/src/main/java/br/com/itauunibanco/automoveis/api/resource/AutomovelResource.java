@@ -65,6 +65,7 @@ public class AutomovelResource {
 
     @PostMapping
     public ResponseEntity<Automovel> cadastrar(@RequestBody @Valid Automovel automovel, HttpServletResponse response ) {
+	automovel.setCodigo(null);//evita atualizar 
 	Automovel novoAutomovel = automovelRepository.save(automovel);
 	publisher.publishEvent( new LocationEvent(this, response , novoAutomovel.getCodigo(), "/{codigo}" ) );
 	return ResponseEntity.status(HttpStatus.CREATED).body(novoAutomovel);
@@ -78,7 +79,7 @@ public class AutomovelResource {
      */
     
     @PutMapping("/{codigo}")
-    public ResponseEntity<Automovel> atualizar(@PathVariable Long codigo, @RequestBody Automovel automovel) {
+    public ResponseEntity<Automovel> atualizar(@PathVariable Long codigo, @RequestBody  @Valid  Automovel automovel) {
 	Automovel novoAutomovel = automovelRepository.getOne(codigo);
 	BeanUtils.copyProperties(automovel, novoAutomovel,"codigo");
 	automovelRepository.save(novoAutomovel);

@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.itauunibanco.boleto.api.dto.BoletoDTO;
 import br.com.itauunibanco.boleto.api.event.LocationEvent;
 import br.com.itauunibanco.boleto.api.model.Boleto;
 import br.com.itauunibanco.boleto.api.repository.BoletoRepository;
@@ -64,10 +65,11 @@ public class BoletoResource {
      */
 
     @PostMapping
-    public ResponseEntity<Boleto> cadastrar(@RequestBody @Valid Boleto boleto, HttpServletResponse response ) {
+    public ResponseEntity<BoletoDTO> cadastrar(@RequestBody @Valid Boleto boleto, HttpServletResponse response ) {
+	boleto.setCodigo(null);
 	Boleto novoBoleto = boletoRepository.save(boleto);
 	publisher.publishEvent( new LocationEvent(this, response , novoBoleto.getCodigo(), "/{codigo}" ) );
-	return ResponseEntity.status(HttpStatus.CREATED).body(novoBoleto);
+	return ResponseEntity.status(HttpStatus.CREATED).body( BoletoDTO.criarBoletoDTO(novoBoleto) );
     }
     
     
@@ -78,11 +80,11 @@ public class BoletoResource {
      */
     
     @PutMapping("/{codigo}")
-    public ResponseEntity<Boleto> atualizar(@PathVariable Long codigo, @RequestBody Boleto boleto) {
+    public ResponseEntity<BoletoDTO> atualizar(@PathVariable Long codigo,@Valid @RequestBody Boleto boleto) {
 	Boleto novoBoleto = boletoRepository.getOne(codigo);
 	BeanUtils.copyProperties(boleto, novoBoleto,"codigo");
 	boletoRepository.save(novoBoleto);
-	return ResponseEntity.ok(novoBoleto);
+	return ResponseEntity.ok( BoletoDTO.criarBoletoDTO(novoBoleto) );
     }
     
     
@@ -104,8 +106,8 @@ public class BoletoResource {
      * @return Json do boleto cadastrado.
      */
     @GetMapping("/{codigo}")
-    public ResponseEntity<Boleto> buscarPeloCodigo(@PathVariable Long codigo) {
+    public ResponseEntity<BoletoDTO> buscarPeloCodigo(@PathVariable Long codigo) {
 	Boleto novoBoleto = boletoRepository.getOne(codigo);
-	return ResponseEntity.ok( novoBoleto ) ;
+	return ResponseEntity.ok( BoletoDTO.criarBoletoDTO(novoBoleto) ) ;
     }
 }
