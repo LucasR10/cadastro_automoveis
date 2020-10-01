@@ -5,14 +5,14 @@ CREATE TABLE IF NOT EXISTS tb_boleto (
   valor double NOT NULL,
   data_vencimento datetime NOT NULL DEFAULT sysdate(),
   PRIMARY KEY (codigo)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 
-INSERT INTO boletos_api.tb_boleto(marca,modelo,valor) VALUES ('vw', 'jetta', '7000');
-INSERT INTO boletos_api.tb_boleto(marca,modelo,valor) VALUES ('vw', 'Fsuca', '4000');
-INSERT INTO boletos_api.tb_boleto(marca,modelo,valor) VALUES ('vw', 'Gol', '5000');
-INSERT INTO boletos_api.tb_boleto(marca,modelo,valor) VALUES ('vw', 'Polo', '5000');
-INSERT INTO boletos_api.tb_boleto(marca,modelo,valor) VALUES ('BWM', 'M5', '7000');
-INSERT INTO boletos_api.tb_boleto(marca,modelo,valor) VALUES ('BWM', 'M4', '7000');
-INSERT INTO boletos_api.tb_boleto(marca,modelo,valor) VALUES ('BWM', 'M3', '7000');
-INSERT INTO boletos_api.tb_boleto(marca,modelo,valor) VALUES ('vw', 'Parati', '7000');
-INSERT INTO boletos_api.tb_boleto(marca,modelo,valor) VALUES ('vw', 'Vitus', '7000');
+INSERT INTO tb_boleto(marca,modelo,valor) VALUES ('vw', 'jetta', '7000');
+INSERT INTO tb_boleto(marca,modelo,valor) VALUES ('vw', 'Fsuca', '4000');
+INSERT INTO tb_boleto(marca,modelo,valor) VALUES ('vw', 'Gol', '5000');
+INSERT INTO tb_boleto(marca,modelo,valor) VALUES ('vw', 'Polo', '5000');
+INSERT INTO tb_boleto(marca,modelo,valor) VALUES ('BWM', 'M5', '7000');
+INSERT INTO tb_boleto(marca,modelo,valor) VALUES ('BWM', 'M4', '7000');
+INSERT INTO tb_boleto(marca,modelo,valor) VALUES ('BWM', 'M3', '7000');
+INSERT INTO tb_boleto(marca,modelo,valor) VALUES ('vw', 'Parati', '7000');
+INSERT INTO tb_boleto(marca,modelo,valor) VALUES ('vw', 'Vitus', '7000');
