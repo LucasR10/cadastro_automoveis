@@ -4,6 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
+import br.com.itauunibanco.boleto.api.model.Boleto;
+
+
+
+
 
 
 /**
@@ -16,7 +21,9 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
  * 
  */
 
-@SpringBootApplication @EnableResourceServer
+
+@SpringBootApplication
+@EnableResourceServer
 public class BoletoApiApplication {
 
 	public static void main(String[] args) {
