@@ -3,7 +3,7 @@ CREATE TABLE tb_automovel (
 	marca VARCHAR(100) NOT NULL COLLATE 'latin1_swedish_ci',
 	modelo VARCHAR(100) NOT NULL COLLATE 'latin1_swedish_ci',
 	valor DOUBLE(22,0) NOT NULL DEFAULT '0',
-	data_cadastro TIMESTAMP NOT NULL DEFAULT sysdate(),
+	data_cadastro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
 	PRIMARY KEY (codigo) USING BTREE
 )
 COMMENT='Cadastra o automóvel disponível para compra'

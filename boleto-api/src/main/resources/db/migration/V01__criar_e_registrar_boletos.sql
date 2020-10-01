@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS tb_boleto (
   marca varchar(30) NOT NULL,
   modelo varchar(30) NOT NULL,
   valor double NOT NULL,
-  data_vencimento datetime NOT NULL DEFAULT sysdate(),
+  data_vencimento datetime NOT NULL DEFAULT CURRENT_TIMESTAMP(),
   PRIMARY KEY (codigo)
 ) ENGINE=InnoDB;
 
