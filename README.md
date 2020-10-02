@@ -1,5 +1,23 @@
 # Exercício de Java / Spring Boot
 
+## Tecnologias e Feramentas:
+ <br />
+| Name | version | description |
+| :--- | :--- | :--- |
+| JAVA  | 1.8| Usando JDK 8  | 
+| Maven | 3.6.3  | EMBEDDED do Eclise |
+| Springf boot | 2.3.5.BUILD-SNAPSHOT| Setup da aplicação |
+| Spring data jpa | 2.3.4 | Pesistencia de dados |
+| Spring cloud netflix eureka server | x | Service Discovery |
+| Spring cloud netflix eureka-client | 2.2 |acessar e Registrar nos servicos do eureka-server|
+| Spring cloud netflix zuul | x | Api Gateway |
+| Spring cloud oauth2 | 2.2.4 | Autenticação e Autorização do servicos |
+| Spring security| 5.3.4 | Autenticação e Autorização do servicos|
+| Hibernate validator| 5.1.3 | Validação de campos |
+| Flyway-core | 6.4.4  |Para migração de dados|
+| MySQL | 5.7 | Banco de dados utilizado |
+| Lombok | 1.8 | Almentar produtividade |
+ <br />
 ##### Objetivo: Criar um Sistema de Cadastro e Compra de Automóveis, que funcione através de uma web API ela deve ter os seguintes endpoints:
   - POST /cadastroAutomoveis
     - Cadastra o automóvel disponível para compra.
@@ -10,6 +28,7 @@
     - Retorna todos os automóveis cadastrados em JSON.
     - Retorna 200 se consulta for ok.
 #### Microsserviços criados durante o desenvolvimento.
+ <br />
 | Nome | Descrição | cloud | URL |
 | ------ | ------ |------ |------ |  
 | automoveis-api | CRUD | amazonaws |  [/v1/automoveis](http://ec2-18-206-127-97.compute-1.amazonaws.com:8080/v1/automoveis/) |
@@ -60,7 +79,7 @@ Está operação vai retornar um `access_token` => `4ece1bf0-d545-4bcc-81e9-915a
 }
 ```
  ## Para acessar o endpoints automoveis
- 
+  <br />
 | Método| URI | parametro | Status Code | descrição |
 | :--- | :--- | :--- | :--- | :--- |
 | GET |[/v1/automoveis](http://ec2-18-206-127-97.compute-1.amazonaws.com:8080/v1/automoveis/)| NÂO  | 200 | `OK` |
@@ -139,7 +158,7 @@ DELETE  http://ec2-18-206-127-97.compute-1.amazonaws.com:8080/v1/automoveis/1
 ``` 
 
 ## Para acessar o endpoints boletos
- 
+  <br />
 | Método| URI | parametro | Status Code | descrição |
 | :--- | :--- | :--- | :--- | :--- |
 | GET |[/v1/boletos](http://ec2-18-206-127-97.compute-1.amazonaws.com:8181/v1/boletos/)| NÂO  | 200 | `OK` |
@@ -308,9 +327,7 @@ Autenticação e autorização com microsserviços usando Spring Cloud OAuth2
  }
 ```
 
-<br />
- 
-# Códigos de status Utilizados na API:
+## Códigos de status Utilizados na API:
 
 `APIs` retorna os seguintes códigos de status::
 
@@ -322,6 +339,15 @@ Autenticação e autorização com microsserviços usando Spring Cloud OAuth2
 | 400 | `BAD_REQUEST` |
 | 404 | `NOT FOUND` |
 | 500 | `INTERNAL SERVER ERROR` |
+## Autor:
+### **[Lucas Carvalho](https://www.linkedin.com/in/lucas-carvalho-793609134/)**
+
+ <br />
+
+ <br />
+
+
+
 
 
 
