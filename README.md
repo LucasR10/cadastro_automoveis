@@ -308,6 +308,8 @@ Autenticação e autorização com microsserviços usando Spring Cloud OAuth2
  }
 ```
 
+<br />
+ 
 # Códigos de status Utilizados na API:
 
 `APIs` retorna os seguintes códigos de status::
