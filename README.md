@@ -241,14 +241,19 @@ Implementado o Service discovery e Service registry com Eureka:
 ```http
  GET  http://198.199.91.245:5555/actuator/routes
 ```
-**URL Base**:
+**URL Base** :
 ```http
- GET  http://198.199.91.245:5555/**
+http://198.199.91.245:5555/**
 ```
+ * `POST`
+ * `GET`
+ * `PUT`
+ * `DELETE`
+
 
 Exemplos de como  acessar os bolestos via **Api Gateway**. podemos acessae qualquer servios via **Api Gateway**
 ```http
-http://localhost:5555/boletos-api/v1/boletos/2
+GET http://localhost:5555/boletos-api/v1/boletos/2
 ```
 ```javascript
    {
@@ -283,7 +288,7 @@ Autenticação e autorização com microsserviços usando Spring Cloud OAuth2
 
 **URL para validar o token**:
 ```http
- POST  http://198.199.91.245:8088/v1/oauth/user
+ GET  http://198.199.91.245:8088/v1/oauth/user
 ```
 ```javascript
 {
