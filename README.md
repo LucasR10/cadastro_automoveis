@@ -17,6 +17,7 @@
 | Flyway-core | 6.4.4  |Para migração de dados|
 | MySQL | 5.7 | Banco de dados utilizado |
 | Lombok | 1.8 | Almentar produtividade |
+| Spring Tool Suite  | 4 | IDE |
  
 
 ##### Objetivo: Criar um Sistema de Cadastro e Compra de Automóveis, que funcione através de uma web API ela deve ter os seguintes endpoints:
