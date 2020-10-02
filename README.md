@@ -307,3 +307,19 @@ Autenticação e autorização com microsserviços usando Spring Cloud OAuth2
   ......
  }
 ```
+
+# Códigos de status Utilizados na API:
+
+`APIs` retorna os seguintes códigos de status::
+
+| Status Code | Descrição |
+| :--- | :--- |
+| 200 | `OK` |
+| 201 | `CREATED` |
+| 2004 | `NO_CONTENT` |
+| 400 | `BAD_REQUEST` |
+| 404 | `NOT FOUND` |
+| 500 | `INTERNAL SERVER ERROR` |
+
+
+
