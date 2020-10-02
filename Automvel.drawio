@@ -1,1 +1,31 @@
-<mxfile host="app.diagrams.net" modified="2020-10-01T13:16:35.473Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="z5tAYCtORicZKRZ9rnZY" version="13.7.7" type="github"><diagram id="1pvoub1_wP3vIT2536Tk" name="Page-1">dZHBDoIwDIafZnfYDOgZUS+eOHheWGVLBl3GDOjTC9kQFzTpof36d//WEVa049lyI68oQBOaiJGwI6E03VFK5kjE05M8C6CxSgTRCir1ggCTQB9KQB8JHaJ2ysSwxq6D2kWMW4tDLLujjl0Nb2ADqprrLb0p4aSne5qv/AKqkYtzmh18p+WLOLykl1zg8IVYSVhhEZ3P2rEAPS9v2YufO/3pfi5moXM/BqZkPXsqoh9i5Rs=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-10-02T04:09:48.551Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="XOMzaxtV3SiWZCWnvTVx" version="13.7.7" type="github">
+  <diagram id="1pvoub1_wP3vIT2536Tk" name="Page-1">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HU9tPCKjeAug56kcv4lb-11" value="Automoveis-api-entidade&lt;br&gt;" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;startSize=33;" vertex="1" parent="1">
+          <mxGeometry x="80" y="56.5" width="640" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="HU9tPCKjeAug56kcv4lb-1" value="Automovel" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=33;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="200" width="140" height="163" as="geometry" />
+        </mxCell>
+        <mxCell id="HU9tPCKjeAug56kcv4lb-2" value="codigo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="HU9tPCKjeAug56kcv4lb-1">
+          <mxGeometry y="33" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HU9tPCKjeAug56kcv4lb-3" value="marca" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="HU9tPCKjeAug56kcv4lb-1">
+          <mxGeometry y="59" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HU9tPCKjeAug56kcv4lb-4" value="modelo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="HU9tPCKjeAug56kcv4lb-1">
+          <mxGeometry y="85" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HU9tPCKjeAug56kcv4lb-7" value="valor" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="HU9tPCKjeAug56kcv4lb-1">
+          <mxGeometry y="111" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HU9tPCKjeAug56kcv4lb-8" value="dataCadastro" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="HU9tPCKjeAug56kcv4lb-1">
+          <mxGeometry y="137" width="140" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
