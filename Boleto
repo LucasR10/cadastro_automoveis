@@ -1,1 +1,31 @@
-<mxfile host="app.diagrams.net" modified="2020-10-02T03:58:23.753Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" version="13.7.7" etag="QqPKiiiHJysfjhiQiU2t" type="github"><diagram id="2kFj_J-il2PYqmG1z5vg">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-10-02T04:08:50.300Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="zEm72MJdQ5q5lAx10V1A" version="13.7.7" type="github">
+  <diagram id="2kFj_J-il2PYqmG1z5vg" name="Page-1">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="k4JkdsP2GnkIDZ6-OUK9-15" value="boleto-api entidade" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="50" width="650" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="k4JkdsP2GnkIDZ6-OUK9-1" value="Boleto" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=33;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="335" y="173.5" width="140" height="163" as="geometry" />
+        </mxCell>
+        <mxCell id="k4JkdsP2GnkIDZ6-OUK9-2" value="codigo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="k4JkdsP2GnkIDZ6-OUK9-1">
+          <mxGeometry y="33" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="k4JkdsP2GnkIDZ6-OUK9-3" value="marca" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="k4JkdsP2GnkIDZ6-OUK9-1">
+          <mxGeometry y="59" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="k4JkdsP2GnkIDZ6-OUK9-4" value="modelo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="k4JkdsP2GnkIDZ6-OUK9-1">
+          <mxGeometry y="85" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="k4JkdsP2GnkIDZ6-OUK9-5" value="valor" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="k4JkdsP2GnkIDZ6-OUK9-1">
+          <mxGeometry y="111" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="k4JkdsP2GnkIDZ6-OUK9-6" value="dataVencimento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="k4JkdsP2GnkIDZ6-OUK9-1">
+          <mxGeometry y="137" width="140" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
