@@ -160,7 +160,7 @@ DELETE  http://ec2-18-206-127-97.compute-1.amazonaws.com:8080/v1/automoveis/1
 ``` 
 
 ## Para acessar o endpoints boletos
-  <br />
+ 
 | Método| URI | parametro | Status Code | descrição |
 | :--- | :--- | :--- | :--- | :--- |
 | GET |[/v1/boletos](http://ec2-18-206-127-97.compute-1.amazonaws.com:8181/v1/boletos/)| NÂO  | 200 | `OK` |
