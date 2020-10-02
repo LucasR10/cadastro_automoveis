@@ -1,7 +1,7 @@
 # Exercício de Java / Spring Boot
 
 ## Tecnologias e Feramentas:
- <br />
+ <br/>
 | Name | version | description |
 | :--- | :--- | :--- |
 | JAVA  | 1.8| Usando JDK 8  | 
@@ -17,7 +17,7 @@
 | Flyway-core | 6.4.4  |Para migração de dados|
 | MySQL | 5.7 | Banco de dados utilizado |
 | Lombok | 1.8 | Almentar produtividade |
- <br />
+ <br/>
 ##### Objetivo: Criar um Sistema de Cadastro e Compra de Automóveis, que funcione através de uma web API ela deve ter os seguintes endpoints:
   - POST /cadastroAutomoveis
     - Cadastra o automóvel disponível para compra.
@@ -28,7 +28,7 @@
     - Retorna todos os automóveis cadastrados em JSON.
     - Retorna 200 se consulta for ok.
 #### Microsserviços criados durante o desenvolvimento.
- <br />
+ <br/>
 | Nome | Descrição | cloud | URL |
 | ------ | ------ |------ |------ |  
 | automoveis-api | CRUD | amazonaws |  [/v1/automoveis](http://ec2-18-206-127-97.compute-1.amazonaws.com:8080/v1/automoveis/) |
@@ -79,7 +79,7 @@ Está operação vai retornar um `access_token` => `4ece1bf0-d545-4bcc-81e9-915a
 }
 ```
  ## Para acessar o endpoints automoveis
-  <br />
+  <br/>
 | Método| URI | parametro | Status Code | descrição |
 | :--- | :--- | :--- | :--- | :--- |
 | GET |[/v1/automoveis](http://ec2-18-206-127-97.compute-1.amazonaws.com:8080/v1/automoveis/)| NÂO  | 200 | `OK` |
@@ -342,9 +342,9 @@ Autenticação e autorização com microsserviços usando Spring Cloud OAuth2
 ## Autor:
 ### **[Lucas Carvalho](https://www.linkedin.com/in/lucas-carvalho-793609134/)**
 
- <br />
+ <br/>
 
- <br />
+ <br/>
 
 
 
