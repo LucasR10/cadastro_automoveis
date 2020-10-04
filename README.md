@@ -1,5 +1,7 @@
-# Exercício de Java / Spring Boot
+# **Exercício de Java / Spring Boot**
 
+### **Obseervação**
+ - Todos os servicos **aws** foram migrado para [digitalOcean](https://www.digitalocean.com/) dia **04/10/2020 as 13:57** . _AWS_ fez uma _cobrança_ no cartão de crédito registrado para os servicos, ***EC2***, ***Elastic Beanstalk***, ***RDS***.
 ## Tecnologias e Feramentas:
 
 | Name | version | description |
@@ -36,7 +38,7 @@
 | automoveis-api | CRUD | amazonaws |  [/v1/automoveis](http://ec2-18-206-127-97.compute-1.amazonaws.com:8080/v1/automoveis/) |
 | boleto-api | CRUD | amazonaws | [/v1/boletos](http://ec2-18-206-127-97.compute-1.amazonaws.com:8181/v1/boletos)  |
 | eureka-service-discovery | Service Discovery com Eureka  | digitalocean | [/eureka/apps/](http://198.199.91.245:8761/eureka/apps/) |
-| api-gateway-zuul | API Gateway| digitalocean | [/eureka/apps/](http://198.199.91.245:5555/actuator/routes) |
+| api-gateway-zuul | API Gateway| digitalocean | [/actuator/routes](http://198.199.91.245:5555/actuator/routes) |
 | authorization-server-auth | Criar fluxo de autorização / autenticação | digitalocean |[/v1/oauth/token/](http://198.199.91.245:8088/v1/oauth/token/) |
 
  #### Client Service da API 
@@ -343,13 +345,3 @@ Autenticação e autorização com microsserviços usando Spring Cloud OAuth2
 | 500 | `INTERNAL SERVER ERROR` |
 ## Autor:
 ### **[Lucas Carvalho](https://www.linkedin.com/in/lucas-carvalho-793609134/)**
-
-
-
-
-
-
-
-
-
-
