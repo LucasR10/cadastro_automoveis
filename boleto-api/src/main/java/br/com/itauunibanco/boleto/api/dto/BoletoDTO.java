@@ -1,11 +1,14 @@
 package br.com.itauunibanco.boleto.api.dto;
 
+import java.math.BigDecimal;
 import java.util.Calendar;
 
 import br.com.itauunibanco.boleto.api.model.Boleto;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
- * DTO para response. 
+ * DTO para response.
  * 
  * @author Lucas Carvalho
  * @author https://www.linkedin.com/in/lucas-carvalho-793609134/
@@ -13,49 +16,29 @@ import br.com.itauunibanco.boleto.api.model.Boleto;
  * @since 1.0 {@link Automovel}
  * 
  */
+@Getter @Setter
 public class BoletoDTO {
-  
+
     private Long codigo;
-    private  Double valor;
-    private Calendar dataVencimento ;
-    
-    public BoletoDTO(Long codigo, Double valor, Calendar dataVencimento) {
+    private BigDecimal valor;
+    private Calendar dataVencimento;
+
+    public BoletoDTO(Long codigo, BigDecimal valor, Calendar dataVencimento) {
 	this.codigo = codigo;
 	this.valor = valor;
 	this.dataVencimento = dataVencimento;
     }
 
-    public BoletoDTO() {
-    }
-    
-    public Long getCodigo() {
-        return codigo;
-    }
+    public BoletoDTO() {}
 
-    public void setCodigo(Long codigo) {
-        this.codigo = codigo;
-    }
-
-    public Double getValor() {
-        return valor;
-    }
-
-    public void setValor(Double valor) {
-        this.valor = valor;
-    }
-
-    public Calendar getDataVencimento() {
-        return dataVencimento;
-    }
 
     public void setDataVencimento(Calendar dataVencimento) {
-        this.dataVencimento = dataVencimento;
+	this.dataVencimento = dataVencimento;
     }
-    
-    //criar boletoDTO from Boleto
-    public static BoletoDTO criarBoletoDTO( Boleto boleto) {
+
+    // criar boletoDTO from Boleto
+    public static BoletoDTO criarBoletoDTO(Boleto boleto) {
 	return new BoletoDTO(boleto.getCodigo(), boleto.getValor(), boleto.getDataVencimento());
     }
-    
-    
+
 }

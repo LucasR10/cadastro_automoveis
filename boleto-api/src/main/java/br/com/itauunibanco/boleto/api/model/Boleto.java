@@ -1,5 +1,6 @@
 package br.com.itauunibanco.boleto.api.model;
 
+import java.math.BigDecimal;
 import java.util.Calendar;
 
 import javax.persistence.Column;
@@ -10,7 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PositiveOrZero;
 import javax.validation.constraints.Size;
@@ -54,8 +54,8 @@ public class Boleto {
     private String modelo;
     
     @Column(name = "valor", length = 50, nullable = false)
-    @NotEmpty @PositiveOrZero
-    private  Double valor;
+    @NotNull @PositiveOrZero
+    private  BigDecimal valor;
     
     @Column(name = "data_vencimento", length = 15)
     @Temporal(TemporalType.TIMESTAMP)
